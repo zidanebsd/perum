@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+@import "MediaQuery.scss";
+
+$theme-bg-color: rgba(16 18 27 / 40%);
+$border-color: rgba(113 119 144 / 25%);
+$theme-color: #f9fafb;
+$inactive-color: rgb(113 119 144 / 78%);
+$body-font: "Poppins", sans-serif;
+$hover-menu-bg: rgba(12 15 25 / 30%);
+$content-title-color: #999ba5;
+$content-bg: rgb(146 151 179 / 13%);
+$button-inactive: rgb(249 250 251 / 55%);
+$dropdown-bg: #21242d;
+$dropdown-hover: rgb(42 46 60);
+$popup-bg: rgb(22 25 37);
+$search-bg: #14162b;
+$overlay-bg: rgba(36, 39, 59, 0.3);
+$scrollbar-bg: rgb(1 2 3 / 40%);
+
+// ============== Dashboard =================
+.container-admin {
+    font-family: $body-font !important;
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    // height: 100vh;
+    max-width: 1163px;
+    max-width: 1163px;
+    margin: 0 auto;
+
+    .box-admin {
+        background-color: $theme-bg-color;
+        max-width: 1365px;
+        // max-height: 860px;
+        // height: 100vh;
+        display: flex;
+        flex-direction: column;
+        // overflow: hidden;
+        position: relative;
+        width: 100%;
+        // border-radius: 14px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        font-size: 15px;
+        font-weight: 500;
+
+        .box-header {
+            // background-color: red;
+            border-bottom: 1px solid $border-color;
+        }
+
+        .section-two {
+            display: flex;
+            box-sizing: border-box;
+            // height: 100%;
+
+            .box-navigation {
+                // background-color: tomato;
+                width: 240px;
+                border-right: 2px solid $border-color;
+            }
+            @media (max-width: $media-q-admin-1) {
+                .box-navigation {
+                    display: none;
+                }
+            }
+
+            .box-contentDashboard {
+                // background-color: darkgoldenrod;
+                width: 100%;
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-bg);
+    border-radius: 10px;
+}
